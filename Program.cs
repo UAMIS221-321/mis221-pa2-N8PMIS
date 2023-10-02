@@ -13,7 +13,16 @@ const double ADMISSION =  12.00;
 //Functions
     string MainMenu(){
         Console.Clear();
-        Console.WriteLine("Welcome to the ASPS Companion Service!\n\nSelect A Service to Continue:\n\n- Type \"C\" for the Compass Feature\n- Type \"P\" for the Park Fees feature\n- Type \"E\" to exit the program\n\n\nSelection: ");
+        Console.WriteLine("Welcome to the ASPS Companion Service!");
+
+        if (File.Exists("trees.txt")) {
+            
+            string str = File.ReadAllText("trees.txt");
+            Console.WriteLine(str);
+        }
+        
+
+        Console.WriteLine("\nSelect A Service to Continue:\n\n\t\t- Type \"C\" for the Compass Feature\n\t\t- Type \"P\" for the Park Fees feature\n\t\t- Type \"E\" to exit the program\n\n\nSelection: ");
         string input = Console.ReadLine();
 
         while(input!="C"&&input!="c"&&input!="P"&&input!="p"&&input!="E"&&input!="e"){
@@ -287,26 +296,6 @@ const double ADMISSION =  12.00;
             finalFee -= payed;
         }
 
-        /**
-        
-        
-        finalFee -= double.Parse(Console.ReadLine());
-
-        double payed = 0.00;
-        while(finalFee>0.00){
-            Console.WriteLine("Remaining Balance: $", finalFee);
-            Console.WriteLine("Please Enter the Amount Paid for Additional Payment: ");
-            payed = double.Parse(Console.ReadLine());
-            while(payed<=0.00){
-                Console.WriteLine("Invalid Input. Please Enter the Amount Paid: ");
-                payed = double.Parse(Console.ReadLine());
-            }
-
-            finalFee-=payed;
-            Console.WriteLine("Remaining Balance: $", finalFee);
-            
-        }
-        **/
 
         Thread.Sleep(1000);
         Console.Clear();
