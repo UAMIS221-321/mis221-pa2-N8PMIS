@@ -1,13 +1,11 @@
 ﻿//Nate Pedigo PA 2 
 //CWID:12133119
 
-//Untested but Confident
-//Returns string selection and formats output, doesn't run Compass() or ParkFees()
-
 using System.Runtime.CompilerServices;
 using System;
 using System.Globalization;
 
+//Full price of singular adult ticket
 const double ADMISSION =  12.00;
 
 //Functions
@@ -180,7 +178,7 @@ const double ADMISSION =  12.00;
         }
     }
 
-    //COMPLETE, Missing extra data checks in Additional Payment section
+    //COMPLETE
     void ParkFees(){
 
         //Variables and Constants
